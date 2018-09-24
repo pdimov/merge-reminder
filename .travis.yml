@@ -7,8 +7,8 @@ install:
   - git clone https://github.com/boostorg/bind
 
 script:
-  - git -C assert diff origin/master origin/develop --exit-code
-  - git -C bind diff origin/master origin/develop --exit-code
+  - git -C assert diff --name-status --exit-code origin/master origin/develop
+  - git -C bind diff --name-status --exit-code origin/master origin/develop
 
 notifications:
   email:
