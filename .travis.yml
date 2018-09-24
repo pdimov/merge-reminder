@@ -1,5 +1,7 @@
 # Copyright 2018 Peter Dimov
 
+language: cpp
+
 sudo: false
 
 env:
@@ -14,6 +16,7 @@ matrix:
   include:
     - env: REPO=assert
     - env: REPO=bind
+    - env: REPO=boostdep
     - env: REPO=core
     - env: REPO=endian
     - env: REPO=filesystem
