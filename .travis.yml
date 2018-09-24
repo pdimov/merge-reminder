@@ -2,29 +2,29 @@
 
 sudo: false
 
-install:
-  - git clone https://github.com/boostorg/assert
-  - git clone https://github.com/boostorg/bind
-  - git clone https://github.com/boostorg/core
-  - git clone https://github.com/boostorg/endian
-  - git clone https://github.com/boostorg/filesystem
-  - git clone https://github.com/boostorg/mp11
-  - git clone https://github.com/boostorg/smart_ptr
-  - git clone https://github.com/boostorg/system
-  - git clone https://github.com/boostorg/throw_exception
-  - git clone https://github.com/boostorg/timer
+env:
+  matrix:
+    - BOGUS_JOB=true
+
+matrix:
+
+  exclude:
+    - env: BOGUS_JOB=true
+
+  include:
+    - env: REPO=assert
+    - env: REPO=bind
+    - env: REPO=core
+    - env: REPO=endian
+    - env: REPO=filesystem
+    - env: REPO=mp11
+    - env: REPO=smart_ptr
+    - env: REPO=system
+    - env: REPO=throw_exception
+    - env: REPO=timer
 
 script:
-  - git -C assert diff --name-status --exit-code origin/master origin/develop
-  - git -C bind diff --name-status --exit-code origin/master origin/develop
-  - git -C core diff --name-status --exit-code origin/master origin/develop
-  - git -C endian diff --name-status --exit-code origin/master origin/develop
-  - git -C filesystem diff --name-status --exit-code origin/master origin/develop
-  - git -C mp11 diff --name-status --exit-code origin/master origin/develop
-  - git -C smart_ptr diff --name-status --exit-code origin/master origin/develop
-  - git -C system diff --name-status --exit-code origin/master origin/develop
-  - git -C throw_exception diff --name-status --exit-code origin/master origin/develop
-  - git -C timer diff --name-status --exit-code origin/master origin/develop
+  - git clone https://github.com/boostorg/$REPO && git -C $REPO diff --name-status --exit-code origin/master origin/develop
 
 notifications:
   email:
