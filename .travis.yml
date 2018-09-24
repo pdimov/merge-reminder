@@ -5,10 +5,26 @@ sudo: false
 install:
   - git clone https://github.com/boostorg/assert
   - git clone https://github.com/boostorg/bind
+  - git clone https://github.com/boostorg/core
+  - git clone https://github.com/boostorg/endian
+  - git clone https://github.com/boostorg/filesystem
+  - git clone https://github.com/boostorg/mp11
+  - git clone https://github.com/boostorg/smart_ptr
+  - git clone https://github.com/boostorg/system
+  - git clone https://github.com/boostorg/throw_exception
+  - git clone https://github.com/boostorg/timer
 
 script:
   - git -C assert diff --name-status --exit-code origin/master origin/develop
   - git -C bind diff --name-status --exit-code origin/master origin/develop
+  - git -C core diff --name-status --exit-code origin/master origin/develop
+  - git -C endian diff --name-status --exit-code origin/master origin/develop
+  - git -C filesystem diff --name-status --exit-code origin/master origin/develop
+  - git -C mp11 diff --name-status --exit-code origin/master origin/develop
+  - git -C smart_ptr diff --name-status --exit-code origin/master origin/develop
+  - git -C system diff --name-status --exit-code origin/master origin/develop
+  - git -C throw_exception diff --name-status --exit-code origin/master origin/develop
+  - git -C timer diff --name-status --exit-code origin/master origin/develop
 
 notifications:
   email:
