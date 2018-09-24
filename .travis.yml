@@ -1,0 +1,15 @@
+# Copyright 2018 Peter Dimov
+
+sudo: false
+
+install:
+  - git clone https://github.com/boostorg/assert
+  - git clone https://github.com/boostorg/bind
+
+script:
+  - git -C assert diff origin/master origin/develop --exit-code
+  - git -C bind diff origin/master origin/develop --exit-code
+
+notifications:
+  email:
+    on_success: always
