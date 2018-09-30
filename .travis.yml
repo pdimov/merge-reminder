@@ -19,6 +19,7 @@ matrix:
     - env: REPO=bind
     - env: REPO=boostdep
     - env: REPO=core
+    - env: REPO=detail
     - env: REPO=endian
     - env: REPO=filesystem
     - env: REPO=function
@@ -28,6 +29,7 @@ matrix:
     - env: REPO=system
     - env: REPO=throw_exception
     - env: REPO=timer
+    - env: REPO=utility
 
 script:
   - git clone https://github.com/boostorg/$REPO && git -C $REPO diff --name-status --exit-code origin/master origin/develop
