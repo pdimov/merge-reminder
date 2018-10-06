@@ -18,6 +18,7 @@ matrix:
     - env: REPO=assert
     - env: REPO=bind
     - env: REPO=boostdep
+    - env: REPO=check_build
     - env: REPO=core
     - env: REPO=detail
     - env: REPO=endian
