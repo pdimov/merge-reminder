@@ -2,35 +2,25 @@
 # Distributed under the Boost Software License, Version 1.0.
 
 language: cpp
-
 sudo: false
 
 env:
-  matrix:
-    - BOGUS_JOB=true
-
-matrix:
-
-  exclude:
-    - env: BOGUS_JOB=true
-
-  include:
-    - env: REPO=assert
-    - env: REPO=bind
-    - env: REPO=boostdep
-    - env: REPO=check_build
-    - env: REPO=core
-    - env: REPO=detail
-    - env: REPO=endian
-    - env: REPO=filesystem
-    - env: REPO=function
-    - env: REPO=mp11
-    - env: REPO=range
-    - env: REPO=smart_ptr
-    - env: REPO=system
-    - env: REPO=throw_exception
-    - env: REPO=timer
-    - env: REPO=utility
+  - REPO=assert
+  - REPO=bind
+  - REPO=boostdep
+  - REPO=check_build
+  - REPO=core
+  - REPO=detail
+  - REPO=endian
+  - REPO=filesystem
+  - REPO=function
+  - REPO=mp11
+  - REPO=range
+  - REPO=smart_ptr
+  - REPO=system
+  - REPO=throw_exception
+  - REPO=timer
+  - REPO=utility
 
 script:
   - git clone https://github.com/boostorg/$REPO && git -C $REPO diff --name-status --exit-code origin/master origin/develop
