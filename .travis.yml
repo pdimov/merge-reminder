@@ -8,12 +8,13 @@ env:
   - REPO=assert
   - REPO=bind
   - REPO=boostdep
+  - REPO=boost_install
   - REPO=check_build
   - REPO=core
   - REPO=detail
   - REPO=endian
-  - REPO=filesystem
   - REPO=function
+  - REPO=headers
   - REPO=mp11
   - REPO=range
   - REPO=smart_ptr
