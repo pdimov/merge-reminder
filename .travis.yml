@@ -24,7 +24,7 @@ env:
   - REPO=utility
 
 script:
-  - git clone https://github.com/boostorg/$REPO && git -C $REPO diff --name-status --exit-code origin/master origin/develop
+  - git clone https://github.com/boostorg/$REPO && git -C $REPO diff --exit-code origin/master origin/develop
 
 notifications:
   email:
