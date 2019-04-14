@@ -1,4 +1,4 @@
-# Copyright 2018 Peter Dimov
+# Copyright 2018, 2019 Peter Dimov
 # Distributed under the Boost Software License, Version 1.0.
 
 language: cpp
@@ -15,8 +15,8 @@ env:
   - REPO=endian
   - REPO=function
   - REPO=headers
+  - REPO=mincmake
   - REPO=mp11
-  - REPO=range
   - REPO=smart_ptr
   - REPO=system
   - REPO=throw_exception
