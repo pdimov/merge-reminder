@@ -21,6 +21,7 @@ env:
   - REPO=system
   - REPO=throw_exception
   - REPO=timer
+  - REPO=variant2
 
 script:
   - git clone https://github.com/boostorg/$REPO && git -C $REPO diff --exit-code origin/master origin/develop
