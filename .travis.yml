@@ -10,6 +10,7 @@ env:
   - REPO=boostdep
   - REPO=boost_install
   - REPO=check_build
+  - REPO=cmake
   - REPO=core
   - REPO=detail
   - REPO=endian
