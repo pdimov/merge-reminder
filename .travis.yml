@@ -12,7 +12,6 @@ env:
   - REPO=check_build
   - REPO=cmake
   - REPO=core
-  - REPO=detail
   - REPO=endian
   - REPO=function
   - REPO=headers
