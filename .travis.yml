@@ -12,9 +12,11 @@ env:
   - REPO=check_build
   - REPO=cmake
   - REPO=core
+  - REPO=describe
   - REPO=endian
   - REPO=function
   - REPO=headers
+  - REPO=lambda2
   - REPO=mincmake
   - REPO=mp11
   - REPO=smart_ptr
