@@ -14,24 +14,43 @@ jobs:
       fail-fast: false
       matrix:
         repo:
+          - accumulators
+          - array
           - assert
+          - bimap
           - bind
-          - boostdep
-          - boost_install
-          - check_build
-          - cmake
+          - chrono
+          - compat
+          - container_hash
           - core
+          - crc
           - describe
           - endian
           - function
           - headers
+          - iostreams
+          - lambda
           - lambda2
           - mp11
+          - msm
+          - numeric_conversion
+          - ptr_container
+          - ratio
           - smart_ptr
           - system
+          - thread
           - throw_exception
           - timer
+          - tuple
+          - type_erasure
+          - typeof
+          - uuid
           - variant2
+          - boostdep
+          - boost_install
+          - check_build
+          - cmake
+          - quickbook
 
     runs-on: ubuntu-latest
 
