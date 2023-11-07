@@ -7,6 +7,8 @@ on:
       - master
       - develop
       - feature/**
+  schedule:
+    - cron: '30 * * * *'
 
 jobs:
   posix:
