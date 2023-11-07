@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - develop
+      - feature/**
+
+jobs:
+  posix:
+    strategy:
+      fail-fast: false
+      matrix:
+        repo:
+          - assert
+          - bind
+          - boostdep
+          - boost_install
+          - check_build
+          - cmake
+          - core
+          - describe
+          - endian
+          - function
+          - headers
+          - lambda2
+          - mp11
+          - smart_ptr
+          - system
+          - throw_exception
+          - timer
+          - variant2
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Diff master..develop
+        run: |
+          git clone https://github.com/boostorg/${{matrix.repo}} && git -C ${{matrix.repo}} diff --exit-code origin/master origin/develop
