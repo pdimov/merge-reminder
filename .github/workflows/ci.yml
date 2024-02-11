@@ -34,7 +34,6 @@ jobs:
           - lambda
           - lambda2
           - mp11
-          - msm
           - numeric_conversion
           - property_tree
           - ptr_container
